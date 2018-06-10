@@ -1,7 +1,7 @@
 
 # react-native-appnext
 
-Appnext support for **Android**
+Appnext support for **Android** and comming soon to **iOS**
 
 
 ## Getting started
