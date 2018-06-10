@@ -108,7 +108,7 @@ export default class Appnext {
 
   static addEventListener(type, handler) {
     if (this.eventHandlers[type]) {
-      this.emitter &&  this.eventHandlers[type].set(
+      this.emitter && this.eventHandlers[type].set(
         handler,
         this.emitter.addListener(type, handler)
       );
