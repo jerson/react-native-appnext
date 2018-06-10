@@ -4,9 +4,9 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "RNAppNext"
   s.description  = <<-DESC
-                  RNAppNext
+                  Appnext support for **Android** and comming soon to **iOS**
                    DESC
-  s.homepage     = ""
+  s.homepage     = "https://github.com/jerson/react-native-appnext"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "jeral17@gmail.com" }
