@@ -30,7 +30,7 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class RNAppnextModule extends ReactContextBaseJavaModule
+public class RNAppNextModule extends ReactContextBaseJavaModule
         implements AppnextAPI.AppnextAdListener, LifecycleEventListener, AppnextAPI.OnAdOpened {
 
     private static final String TAG = "RNAppnext";
@@ -39,7 +39,7 @@ public class RNAppnextModule extends ReactContextBaseJavaModule
     private AppnextAPI api;
     private HashMap<String, AppnextAd> ads;
 
-    public RNAppnextModule(ReactApplicationContext reactContext) {
+    public RNAppNextModule(ReactApplicationContext reactContext) {
         super(reactContext);
         context = reactContext;
         context.addLifecycleEventListener(this);
