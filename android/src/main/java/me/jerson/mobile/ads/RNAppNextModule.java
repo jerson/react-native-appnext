@@ -474,16 +474,4 @@ public class RNAppNextModule extends ReactContextBaseJavaModule
 
     }
 
-    @Override
-    public void onConnect() {
-        Log.d(TAG, "onConnect");
-
-    }
-
-    @Override
-    public void onDisconnect() {
-        Log.d(TAG, "onDisconnect");
-
-    }
-
 }
