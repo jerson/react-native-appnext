@@ -18,8 +18,8 @@ Appnext support for **Android**
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-appnext` and add `RNAppNext.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNAppNext.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
+2. Go to `node_modules` ➜ `react-native-appnext` and add `RNAppnext.xcodeproj`
+3. In XCode, in the project navigator, select your project. Add `libRNAppnext.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
 #### Android
@@ -40,7 +40,7 @@ Appnext support for **Android**
 
 ## Usage
 ```javascript
-import AppNext from 'react-native-appnext';
+import Appnext from 'react-native-appnext';
 
    eventHandlers = [ 
     onAdLoaded,
@@ -54,19 +54,19 @@ import AppNext from 'react-native-appnext';
     onFullScreenVideoClosed
    ];
 
-  AppNext.setupAd(placementId);
-  AppNext.showRewardedVideo(placementId);
-  AppNext.showInterstitial(placementId);
-  AppNext.showFullScreenVideo(placementId);
-  AppNext.loadAd(category = "Entertainment")
-  AppNext.removeAd(adId);
-  AppNext.adClicked(adId);
-  AppNext.adImpression(adId);
-  AppNext.videoStarted(adId);
-  AppNext.videoEnded(adId);
-  AppNext.privacyClicked(adId);
-  AppNext.addEventListener(type, handler);
-  AppNext.removeEventListener(type, handler);
-  AppNext.removeAllListeners();
+  Appnext.setupAd(placementId);
+  Appnext.showRewardedVideo(placementId);
+  Appnext.showInterstitial(placementId);
+  Appnext.showFullScreenVideo(placementId);
+  Appnext.loadAd(category = "Entertainment")
+  Appnext.removeAd(adId);
+  Appnext.adClicked(adId);
+  Appnext.adImpression(adId);
+  Appnext.videoStarted(adId);
+  Appnext.videoEnded(adId);
+  Appnext.privacyClicked(adId);
+  Appnext.addEventListener(type, handler);
+  Appnext.removeEventListener(type, handler);
+  Appnext.removeAllListeners();
 ```
   
