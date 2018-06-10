@@ -24,6 +24,7 @@ Appnext support for **Android** and comming soon to **iOS**
 
 #### Android
 
+
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
   - Add `import me.jerson.mobile.ads.RNAppNextPackage;` to the imports at the top of the file
   - Add `new RNAppNextPackage()` to the list returned by the `getPackages()` method
@@ -36,7 +37,17 @@ Appnext support for **Android** and comming soon to **iOS**
   	```
       compile project(':react-native-appnext')
   	```
-
+4. Open up `android/app/src/main/java/[...]/MainApplication.java`
+  - Add `import com.appnext.base.Appnext;` to the imports at the top of the file
+  - Add `Appnext.init(getApplicationContext());` to the the `onCreate()` method
+    ```
+    public void onCreate() {
+        //...
+        Appnext.init(getApplicationContext());
+        //...
+    }
+    ```
+    
 
 ## Usage
 ```javascript
