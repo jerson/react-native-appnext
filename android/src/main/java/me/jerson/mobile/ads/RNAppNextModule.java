@@ -30,7 +30,8 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class RNAppnextModule extends ReactContextBaseJavaModule implements AppnextAPI.AppnextAdListener,  LifecycleEventListener, AppnextAPI.OnAdOpened {
+public class RNAppnextModule extends ReactContextBaseJavaModule
+        implements AppnextAPI.AppnextAdListener, LifecycleEventListener, AppnextAPI.OnAdOpened {
 
     private static final String TAG = "RNAppnext";
     private ReactApplicationContext context;
@@ -43,7 +44,6 @@ public class RNAppnextModule extends ReactContextBaseJavaModule implements Appne
         context = reactContext;
         context.addLifecycleEventListener(this);
     }
-
 
     @Override
     public String getName() {
@@ -85,7 +85,6 @@ public class RNAppnextModule extends ReactContextBaseJavaModule implements Appne
         } catch (Exception e) {
             promise.reject("500", e.getMessage());
         }
-
 
     }
 
@@ -144,7 +143,6 @@ public class RNAppnextModule extends ReactContextBaseJavaModule implements Appne
         });
     }
 
-
     @ReactMethod
     public void showInterstitial(String placementId, final Promise promise) {
         final Interstitial interstitialAd = new Interstitial(context, placementId);
@@ -190,7 +188,6 @@ public class RNAppnextModule extends ReactContextBaseJavaModule implements Appne
             }
         });
     }
-
 
     @ReactMethod
     public void showRewardedVideo(String placementId, final Promise promise) {
@@ -278,30 +275,22 @@ public class RNAppnextModule extends ReactContextBaseJavaModule implements Appne
             });
         }
 
-
     }
 
     @ReactMethod
     public void adImpression(final String adId) {
 
-       /* if (context.getCurrentActivity() != null) {
-            context.getCurrentActivity().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        if (ads.containsKey(adId)) {
-                            AppnextAd ad = ads.get(adId);
-                            api.adImpression(ad);
-                        } else {
-                            Log.w(TAG, "[ERROR] adImpression:" + adId);
-                        }
-                    } catch (Exception e) {
-                        Log.w(TAG, "[ERROR] adImpression2:" + e.getMessage());
-
-                    }
-                }
-            });
-        }*/
+        /*
+         * if (context.getCurrentActivity() != null) {
+         * context.getCurrentActivity().runOnUiThread(new Runnable() {
+         * 
+         * @Override public void run() { try { if (ads.containsKey(adId)) { AppnextAd ad
+         * = ads.get(adId); api.adImpression(ad); } else { Log.w(TAG,
+         * "[ERROR] adImpression:" + adId); } } catch (Exception e) { Log.w(TAG,
+         * "[ERROR] adImpression2:" + e.getMessage());
+         * 
+         * } } }); }
+         */
 
         Handler mainHandler = new Handler(context.getMainLooper());
         Runnable myRunnable = new Runnable() {
@@ -346,7 +335,6 @@ public class RNAppnextModule extends ReactContextBaseJavaModule implements Appne
         };
         mainHandler.post(myRunnable);
 
-
     }
 
     @ReactMethod
@@ -371,7 +359,6 @@ public class RNAppnextModule extends ReactContextBaseJavaModule implements Appne
         };
         mainHandler.post(myRunnable);
 
-
     }
 
     @ReactMethod
@@ -395,7 +382,6 @@ public class RNAppnextModule extends ReactContextBaseJavaModule implements Appne
             }
         };
         mainHandler.post(myRunnable);
-
 
     }
 
@@ -459,11 +445,9 @@ public class RNAppnextModule extends ReactContextBaseJavaModule implements Appne
 
     }
 
-    private void sendEvent(String eventName,
-                           @Nullable WritableMap params) {
+    private void sendEvent(String eventName, @Nullable WritableMap params) {
         try {
-            context.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                    .emit(eventName, params);
+            context.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, params);
         } catch (Exception e) {
             Log.e(TAG, "error", e);
         }
@@ -486,7 +470,7 @@ public class RNAppnextModule extends ReactContextBaseJavaModule implements Appne
     public void onHostDestroy() {
         isLoaded = false;
         Log.d(TAG, "onHostDestroy");
-        //api.finish();
+        // api.finish();
 
     }
 
@@ -501,6 +485,5 @@ public class RNAppnextModule extends ReactContextBaseJavaModule implements Appne
         Log.d(TAG, "onDisconnect");
 
     }
-
 
 }
