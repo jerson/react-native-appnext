@@ -1,9 +1,13 @@
 
 {
   "name": "react-native-appnext",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jerson/react-native-appnext"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
