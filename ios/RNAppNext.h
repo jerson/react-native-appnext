@@ -1,11 +1,9 @@
 
-#if __has_include("RCTBridgeModule.h")
-#import "RCTBridgeModule.h"
-#else
-#import <React/RCTBridgeModule.h>
-#endif
+#import <React/RCTEventEmitter.h>
 
-@interface RNAppNext : NSObject <RCTBridgeModule>
 
+
+@interface RNAppNext : RCTEventEmitter <RCTBridgeModule>
+- (void)sendEvent:(NSString *)name body:(id)body;
 @end
   

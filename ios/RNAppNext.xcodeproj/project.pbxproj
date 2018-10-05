@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31530BD52166F7D20062542D /* libAppnextSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 319173702166F72C00525696 /* libAppnextSDKCore.a */; };
+		31530BD62166F7D20062542D /* libAppnextNativeAdsSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3191736E2166F72B00525696 /* libAppnextNativeAdsSDK.a */; };
+		31530BD72166F7E30062542D /* libAppnextLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3191736F2166F72C00525696 /* libAppnextLib.a */; };
+		31A2569D216702DA00ECB5D0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A2569C216702DA00ECB5D0 /* QuartzCore.framework */; };
+		31A2569F216702EC00ECB5D0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A2569E216702EC00ECB5D0 /* Security.framework */; };
+		31A256A1216702F300ECB5D0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A256A0216702F300ECB5D0 /* CFNetwork.framework */; };
+		31A256A3216702FB00ECB5D0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A256A2216702FB00ECB5D0 /* AVFoundation.framework */; };
+		31A256A52167030200ECB5D0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A256A42167030200ECB5D0 /* SystemConfiguration.framework */; };
+		31A256A72167030A00ECB5D0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A256A62167030A00ECB5D0 /* MobileCoreServices.framework */; };
+		31A256A92167031100ECB5D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A256A82167031100ECB5D0 /* CoreGraphics.framework */; };
+		31A256AB2167031700ECB5D0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A256AA2167031700ECB5D0 /* CoreMedia.framework */; };
+		31A256AD2167031D00ECB5D0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A256AC2167031D00ECB5D0 /* AdSupport.framework */; };
+		31A256AF2167032400ECB5D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A256AE2167032400ECB5D0 /* UIKit.framework */; };
+		31A256B12167032D00ECB5D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A256B02167032C00ECB5D0 /* Foundation.framework */; };
+		31A256B32167033600ECB5D0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A256B22167033600ECB5D0 /* CoreTelephony.framework */; };
+		31EAE8812161A72C000EEF9A /* NativeAdsDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EAE8802161A72C000EEF9A /* NativeAdsDelegate.m */; };
+		31EAE8842161A74D000EEF9A /* IntersitialDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EAE8832161A74D000EEF9A /* IntersitialDelegate.m */; };
+		31EAE8B22161AE53000EEF9A /* RewardedVideoDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EAE8B12161AE53000EEF9A /* RewardedVideoDelegate.m */; };
+		31EAE8B52161AE64000EEF9A /* FullScreenVideoDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EAE8B42161AE64000EEF9A /* FullScreenVideoDelegate.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RNAppNext.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAppNext.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +43,29 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNAppNext.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNAppNext.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3191736E2166F72B00525696 /* libAppnextNativeAdsSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAppnextNativeAdsSDK.a; path = AppnextNativeAdsSDK/libAppnextNativeAdsSDK.a; sourceTree = "<group>"; };
+		3191736F2166F72C00525696 /* libAppnextLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAppnextLib.a; path = AppnextIOSSDK/libAppnextLib.a; sourceTree = "<group>"; };
+		319173702166F72C00525696 /* libAppnextSDKCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAppnextSDKCore.a; path = AppnextNativeAdsSDK/libAppnextSDKCore.a; sourceTree = "<group>"; };
+		31A2569C216702DA00ECB5D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		31A2569E216702EC00ECB5D0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		31A256A0216702F300ECB5D0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		31A256A2216702FB00ECB5D0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		31A256A42167030200ECB5D0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		31A256A62167030A00ECB5D0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		31A256A82167031100ECB5D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		31A256AA2167031700ECB5D0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		31A256AC2167031D00ECB5D0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		31A256AE2167032400ECB5D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		31A256B02167032C00ECB5D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		31A256B22167033600ECB5D0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		31EAE87F2161A72C000EEF9A /* NativeAdsDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeAdsDelegate.h; sourceTree = "<group>"; };
+		31EAE8802161A72C000EEF9A /* NativeAdsDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeAdsDelegate.m; sourceTree = "<group>"; };
+		31EAE8822161A74D000EEF9A /* IntersitialDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntersitialDelegate.h; sourceTree = "<group>"; };
+		31EAE8832161A74D000EEF9A /* IntersitialDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntersitialDelegate.m; sourceTree = "<group>"; };
+		31EAE8B02161AE53000EEF9A /* RewardedVideoDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RewardedVideoDelegate.h; sourceTree = "<group>"; };
+		31EAE8B12161AE53000EEF9A /* RewardedVideoDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RewardedVideoDelegate.m; sourceTree = "<group>"; };
+		31EAE8B32161AE64000EEF9A /* FullScreenVideoDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullScreenVideoDelegate.h; sourceTree = "<group>"; };
+		31EAE8B42161AE64000EEF9A /* FullScreenVideoDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullScreenVideoDelegate.m; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNAppNext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAppNext.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNAppNext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAppNext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,6 +75,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31A256B32167033600ECB5D0 /* CoreTelephony.framework in Frameworks */,
+				31A256B12167032D00ECB5D0 /* Foundation.framework in Frameworks */,
+				31A256AF2167032400ECB5D0 /* UIKit.framework in Frameworks */,
+				31A256AD2167031D00ECB5D0 /* AdSupport.framework in Frameworks */,
+				31A256AB2167031700ECB5D0 /* CoreMedia.framework in Frameworks */,
+				31A256A92167031100ECB5D0 /* CoreGraphics.framework in Frameworks */,
+				31A256A72167030A00ECB5D0 /* MobileCoreServices.framework in Frameworks */,
+				31A256A52167030200ECB5D0 /* SystemConfiguration.framework in Frameworks */,
+				31A256A3216702FB00ECB5D0 /* AVFoundation.framework in Frameworks */,
+				31A256A1216702F300ECB5D0 /* CFNetwork.framework in Frameworks */,
+				31A2569F216702EC00ECB5D0 /* Security.framework in Frameworks */,
+				31A2569D216702DA00ECB5D0 /* QuartzCore.framework in Frameworks */,
+				31530BD72166F7E30062542D /* libAppnextLib.a in Frameworks */,
+				31530BD52166F7D20062542D /* libAppnextSDKCore.a in Frameworks */,
+				31530BD62166F7D20062542D /* libAppnextNativeAdsSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,12 +104,43 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3191736D2166F72B00525696 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31A256B22167033600ECB5D0 /* CoreTelephony.framework */,
+				31A256B02167032C00ECB5D0 /* Foundation.framework */,
+				31A256AE2167032400ECB5D0 /* UIKit.framework */,
+				31A256AC2167031D00ECB5D0 /* AdSupport.framework */,
+				31A256AA2167031700ECB5D0 /* CoreMedia.framework */,
+				31A256A82167031100ECB5D0 /* CoreGraphics.framework */,
+				31A256A62167030A00ECB5D0 /* MobileCoreServices.framework */,
+				31A256A42167030200ECB5D0 /* SystemConfiguration.framework */,
+				31A256A2216702FB00ECB5D0 /* AVFoundation.framework */,
+				31A256A0216702F300ECB5D0 /* CFNetwork.framework */,
+				31A2569E216702EC00ECB5D0 /* Security.framework */,
+				31A2569C216702DA00ECB5D0 /* QuartzCore.framework */,
+				3191736F2166F72C00525696 /* libAppnextLib.a */,
+				3191736E2166F72B00525696 /* libAppnextNativeAdsSDK.a */,
+				319173702166F72C00525696 /* libAppnextSDKCore.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				31EAE8B32161AE64000EEF9A /* FullScreenVideoDelegate.h */,
+				31EAE8B42161AE64000EEF9A /* FullScreenVideoDelegate.m */,
+				31EAE8B02161AE53000EEF9A /* RewardedVideoDelegate.h */,
+				31EAE8B12161AE53000EEF9A /* RewardedVideoDelegate.m */,
+				31EAE8822161A74D000EEF9A /* IntersitialDelegate.h */,
+				31EAE8832161A74D000EEF9A /* IntersitialDelegate.m */,
+				31EAE87F2161A72C000EEF9A /* NativeAdsDelegate.h */,
+				31EAE8802161A72C000EEF9A /* NativeAdsDelegate.m */,
 				B3E7B5881CC2AC0600A0062D /* RNAppNext.h */,
 				B3E7B5891CC2AC0600A0062D /* RNAppNext.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				3191736D2166F72B00525696 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,7 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31EAE8812161A72C000EEF9A /* NativeAdsDelegate.m in Sources */,
+				31EAE8B52161AE64000EEF9A /* FullScreenVideoDelegate.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNAppNext.m in Sources */,
+				31EAE8B22161AE53000EEF9A /* RewardedVideoDelegate.m in Sources */,
+				31EAE8842161A74D000EEF9A /* IntersitialDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,12 +296,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
+					"$(PROJECT_DIR)/AppnextNativeAdsSDK/include",
+					"$(PROJECT_DIR)/AppnextiOSSDK/include",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppnextIOSSDK",
+					"$(PROJECT_DIR)/AppnextNativeAdsSDK",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNAppNext;
 				SKIP_INSTALL = YES;
@@ -224,8 +322,14 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
+					"$(PROJECT_DIR)/AppnextNativeAdsSDK/include",
+					"$(PROJECT_DIR)/AppnextiOSSDK/include",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppnextIOSSDK",
+					"$(PROJECT_DIR)/AppnextNativeAdsSDK",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNAppNext;
 				SKIP_INSTALL = YES;

@@ -20,9 +20,8 @@ export default class Appnext {
 
   static setupAd(placementId) {
     __DEV__ && console.debug(TAG, "setupAd", placementId);
-    if (Platform.OS !== "android") {
+    if (Platform.OS === "windows") {
       __DEV__ && console.warn(TAG, "not supported on", Platform.OS);
-
       return;
     }
     return RNAppNext.setupAd(placementId);
@@ -30,9 +29,8 @@ export default class Appnext {
 
   static showRewardedVideo(placementId) {
     __DEV__ && console.debug(TAG, "showRewardedVideo", placementId);
-    if (Platform.OS !== "android") {
+    if (Platform.OS === "windows") {
       __DEV__ && console.warn(TAG, "not supported on", Platform.OS);
-
       return;
     }
     return RNAppNext.showRewardedVideo(placementId);
@@ -40,9 +38,8 @@ export default class Appnext {
 
   static showInterstitial(placementId) {
     __DEV__ && console.debug(TAG, "showInterstitial", placementId);
-    if (Platform.OS !== "android") {
+    if (Platform.OS === "windows") {
       __DEV__ && console.warn(TAG, "not supported on", Platform.OS);
-
       return;
     }
     return RNAppNext.showInterstitial(placementId);
@@ -50,9 +47,8 @@ export default class Appnext {
 
   static showFullScreenVideo(placementId) {
     __DEV__ && console.debug(TAG, "showFullScreenVideo", placementId);
-    if (Platform.OS !== "android") {
+    if (Platform.OS === "windows") {
       __DEV__ && console.warn(TAG, "not supported on", Platform.OS);
-
       return;
     }
     return RNAppNext.showFullScreenVideo(placementId);
@@ -60,9 +56,8 @@ export default class Appnext {
 
   static loadAd(category = "Entertainment") {
     __DEV__ && console.debug(TAG, "loadAd", category);
-    if (Platform.OS !== "android") {
+    if (Platform.OS === "windows") {
       __DEV__ && console.warn(TAG, "not supported on", Platform.OS);
-
       return;
     }
     return RNAppNext.loadAd(category);
@@ -70,9 +65,8 @@ export default class Appnext {
 
   static removeAd(adId) {
     __DEV__ && console.debug(TAG, "removeAd", adId);
-    if (Platform.OS !== "android") {
+    if (Platform.OS === "windows") {
       __DEV__ && console.warn(TAG, "not supported on", Platform.OS);
-
       return;
     }
     return RNAppNext.removeAd(adId);
@@ -80,9 +74,8 @@ export default class Appnext {
 
   static adClicked(adId) {
     __DEV__ && console.debug(TAG, "adClicked", adId);
-    if (Platform.OS !== "android") {
+    if (Platform.OS === "windows") {
       __DEV__ && console.warn(TAG, "not supported on", Platform.OS);
-
       return;
     }
     return RNAppNext.adClicked(adId);
@@ -90,9 +83,8 @@ export default class Appnext {
 
   static adImpression(adId) {
     __DEV__ && console.debug(TAG, "adImpression", adId);
-    if (Platform.OS !== "android") {
+    if (Platform.OS === "windows") {
       __DEV__ && console.warn(TAG, "not supported on", Platform.OS);
-
       return;
     }
     return RNAppNext.adImpression(adId);
@@ -100,9 +92,8 @@ export default class Appnext {
 
   static videoStarted(adId) {
     __DEV__ && console.debug(TAG, "videoStarted", adId);
-    if (Platform.OS !== "android") {
+    if (Platform.OS === "windows") {
       __DEV__ && console.warn(TAG, "not supported on", Platform.OS);
-
       return;
     }
     return RNAppNext.videoStarted(adId);
@@ -110,9 +101,8 @@ export default class Appnext {
 
   static videoEnded(adId) {
     __DEV__ && console.debug(TAG, "videoEnded", adId);
-    if (Platform.OS !== "android") {
+    if (Platform.OS === "windows") {
       __DEV__ && console.warn(TAG, "not supported on", Platform.OS);
-
       return;
     }
     return RNAppNext.videoEnded(adId);
@@ -120,9 +110,8 @@ export default class Appnext {
 
   static privacyClicked(adId) {
     __DEV__ && console.debug(TAG, "privacyClicked", adId);
-    if (Platform.OS !== "android") {
+    if (Platform.OS === "windows") {
       __DEV__ && console.warn(TAG, "not supported on", Platform.OS);
-
       return;
     }
     return RNAppNext.privacyClicked(adId);
