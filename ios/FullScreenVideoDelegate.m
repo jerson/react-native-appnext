@@ -9,10 +9,10 @@
 
 
 - (FullScreenVideoDelegate *)initWithAppNext: (RNAppNext *) instance{
-    
+    NSLog(@"FullScreenVideoDelegate => initWithAppNext");
+
     self = [super init];
     if (self) {
-        NSLog(@"init FullScreenVideoDelegate");
         appnext = instance;
         
     }
@@ -31,12 +31,16 @@
 }
 
 - (void) adLoaded:(AppnextAd *)ad{
+    NSLog(@"FullScreenVideoDelegate => adLoaded");
+
     if (ad.adIsLoaded)
     {
         [ad showAd];
     }
 }
 - (void) adOpened:(AppnextAd *)ad{
+    NSLog(@"FullScreenVideoDelegate => adOpened");
+
     resolve(@{@"auid": @"0"});
 }
 - (void) adClosed:(AppnextAd *)ad{
@@ -46,6 +50,8 @@
     [appnext sendEvent:@"onFullScreenVideoClicked" body:@{ @"auid": @"0" }];
 }
 - (void) adUserWillLeaveApplication:(AppnextAd *)ad{
+    NSLog(@"FullScreenVideoDelegate => adUserWillLeaveApplication");
+
 }
 - (void) adError:(AppnextAd *)ad error:(NSString *)error{
     reject(@"FullScreenVideoDelegate", error, [NSError errorWithDomain:error code:100 userInfo:nil]);

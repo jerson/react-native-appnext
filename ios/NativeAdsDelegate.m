@@ -13,10 +13,10 @@
 
 
 - (NativeAdsDelegate *)initWithAppNext: (RNAppNext *) instance{
+    NSLog(@"NativeAdsDelegate => initWithAppNext");
     
     self = [super init];
     if (self) {
-        NSLog(@"init IntersitialDelegate");
         appnext = instance;
         ads = [[NSMutableDictionary alloc] init];
         
@@ -31,13 +31,16 @@
     reject = rejecter;
 }
 - (id)getAd: (NSString *) adID{
+    NSLog(@"NativeAdsDelegate => getAd: %@",adID);
     return [ads objectForKey:adID];
 }
 - (void)removeAd: (NSString *) adID{
+    NSLog(@"NativeAdsDelegate => removeAd: %@",adID);
     [ads removeObjectForKey:adID];
 }
 - (void) onAdsLoaded:(NSArray *)adsReponse forRequest:(AppnextNativeAdsRequest *)request{
-    
+    NSLog(@"NativeAdsDelegate => onAdsLoaded");
+
     [adsReponse enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         AppnextAdData * ad = (AppnextAdData *) object;
         [ads setObject:ad forKey:ad.idx];
@@ -67,7 +70,7 @@
     
 }
 - (void) onError:(NSString *)error forRequest:(AppnextNativeAdsRequest *)request {
-    NSLog(@"NativeAdsDelegate: %@",error);
+    NSLog(@"NativeAdsDelegate => onError: %@",error);
 }
 
 @end

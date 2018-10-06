@@ -29,10 +29,10 @@
 @synthesize bridge = _bridge;
 
 - (RNAppNext *)init {
-    
+    NSLog(@"RNAppNext => init");
+
     self = [super init];
     if (self) {
-        NSLog(@"init RNAppNext");
         intersitialDelegate = [[IntersitialDelegate alloc] initWithAppNext:self];
         nativeAdsDelegate = [[NativeAdsDelegate alloc] initWithAppNext:self];
         rewardedVideoDelegate = [[RewardedVideoDelegate alloc] initWithAppNext:self];
@@ -49,11 +49,15 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(setupAd:(NSString *)placementID)
 {
+    NSLog(@"RNAppNext => setupAd: %@",placementID);
+
     api = [[AppnextNativeAdsSDKApi alloc] initWithPlacementID:placementID withViewController:nil];
 }
 
 RCT_EXPORT_METHOD(privacyClicked:(NSString *)adID)
 {
+    NSLog(@"RNAppNext => privacyClicked: %@",adID);
+
     id ad = [nativeAdsDelegate getAd:adID];
     if(ad!=nil){
         [api privacyClicked:ad withPrivacyClickedDelegate:nil];
@@ -62,6 +66,8 @@ RCT_EXPORT_METHOD(privacyClicked:(NSString *)adID)
 
 RCT_EXPORT_METHOD(videoEnded:(NSString *)adID)
 {
+    NSLog(@"RNAppNext => videoEnded: %@",adID);
+
     id ad = [nativeAdsDelegate getAd:adID];
     if(ad!=nil){
         [api videoEnded:ad];
@@ -70,6 +76,7 @@ RCT_EXPORT_METHOD(videoEnded:(NSString *)adID)
 
 RCT_EXPORT_METHOD(videoStarted:(NSString *)adID)
 {
+    NSLog(@"RNAppNext => videoStarted: %@",adID);
     id ad = [nativeAdsDelegate getAd:adID];
     if(ad!=nil){
         [api videoStarted:ad];
@@ -78,6 +85,8 @@ RCT_EXPORT_METHOD(videoStarted:(NSString *)adID)
 
 RCT_EXPORT_METHOD(adImpression:(NSString *)adID)
 {
+    NSLog(@"RNAppNext => adImpression: %@",adID);
+
     id ad = [nativeAdsDelegate getAd:adID];
     if(ad!=nil){
         [api adImpression:ad];
@@ -86,6 +95,8 @@ RCT_EXPORT_METHOD(adImpression:(NSString *)adID)
 
 RCT_EXPORT_METHOD(adClicked:(NSString *)adID)
 {
+    NSLog(@"RNAppNext => adClicked: %@",adID);
+
     id ad = [nativeAdsDelegate getAd:adID];
     if(ad!=nil){
         [api adClicked:ad withAdOpenedDelegate:nil];
@@ -94,6 +105,8 @@ RCT_EXPORT_METHOD(adClicked:(NSString *)adID)
 
 RCT_EXPORT_METHOD(removeAd:(NSString *)adID)
 {
+    NSLog(@"RNAppNext => removeAd: %@",adID);
+
     [nativeAdsDelegate removeAd:adID];
 }
 
@@ -102,6 +115,7 @@ RCT_REMAP_METHOD(loadAd,
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
+    NSLog(@"RNAppNext => loadAd: %@",category);
     AppnextNativeAdsRequest *request = [[AppnextNativeAdsRequest alloc] init];
     request.count = 1;
     //request.postback = @"REPLACE_WITH_POSTBACK";
@@ -121,7 +135,8 @@ RCT_REMAP_METHOD(showInterstitial,
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-    
+    NSLog(@"RNAppNext => showInterstitial: %@",placementID);
+
     interstitial = [[AppnextInterstitialAd alloc] initWithPlacementID:placementID];
     [intersitialDelegate setResolver: resolve];
     [intersitialDelegate setRejecter: reject];
@@ -134,7 +149,8 @@ RCT_REMAP_METHOD(showRewardedVideo,
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-    
+    NSLog(@"RNAppNext => showRewardedVideo: %@",placementID);
+
     rewarded = [[AppnextRewardedVideoAd alloc] initWithPlacementID:placementID];
     [rewardedVideoDelegate setResolver: resolve];
     [rewardedVideoDelegate setRejecter: reject];
@@ -147,7 +163,8 @@ RCT_REMAP_METHOD(showFullScreenVideo,
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-    
+    NSLog(@"RNAppNext => showFullScreenVideo: %@",placementID);
+
     fullScreen = [[AppnextFullScreenVideoAd alloc] initWithPlacementID:placementID];
     [fullScreenVideoDelegate setResolver: resolve];
     [fullScreenVideoDelegate setRejecter: reject];
@@ -156,6 +173,8 @@ RCT_REMAP_METHOD(showFullScreenVideo,
 }
 
 - (void)sendEvent:(NSString *)name body:(id)body {
+    NSLog(@"RNAppNext => sendEvent: %@",name);
+
     [self sendEventWithName:name body:body];
 }
 

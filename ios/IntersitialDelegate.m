@@ -9,10 +9,10 @@
 
 
 - (IntersitialDelegate *)initWithAppNext: (RNAppNext *) instance{
-    
+    NSLog(@"IntersitialDelegate => initWithAppNext");
+
     self = [super init];
     if (self) {
-        NSLog(@"init IntersitialDelegate");
         appnext = instance;
         
     }
@@ -27,12 +27,16 @@
 }
 
 - (void) adLoaded:(AppnextAd *)ad{
+    NSLog(@"IntersitialDelegate => adLoaded");
+
     if (ad.adIsLoaded)
     {
         [ad showAd];
     }
 }
 - (void) adOpened:(AppnextAd *)ad{
+    NSLog(@"IntersitialDelegate => adOpened");
+
     resolve(@{@"auid": @"0"});
 }
 - (void) adClosed:(AppnextAd *)ad{
@@ -42,6 +46,8 @@
     [appnext sendEvent:@"onInterstitialClicked" body:@{ @"auid": @"0" }];
 }
 - (void) adUserWillLeaveApplication:(AppnextAd *)ad{
+    NSLog(@"IntersitialDelegate => adUserWillLeaveApplication");
+
 }
 - (void) adError:(AppnextAd *)ad error:(NSString *)error{
     reject(@"IntersitialDelegate", error, [NSError errorWithDomain:error code:100 userInfo:nil]);

@@ -9,10 +9,10 @@
 
 
 - (RewardedVideoDelegate *)initWithAppNext: (RNAppNext *) instance{
-    
+    NSLog(@"RewardedVideoDelegate => initWithAppNext");
+
     self = [super init];
     if (self) {
-        NSLog(@"init RewardedVideoDelegate");
         appnext = instance;
         
     }
@@ -30,12 +30,16 @@
     [appnext sendEvent:@"onRewardedVideoEnded" body:@{ @"auid": @"0"  }];
 }
 - (void) adLoaded:(AppnextAd *)ad{
+    NSLog(@"RewardedVideoDelegate => adLoaded");
+
     if (ad.adIsLoaded)
     {
         [ad showAd];
     }
 }
 - (void) adOpened:(AppnextAd *)ad{
+    NSLog(@"RewardedVideoDelegate => adOpened");
+
     resolve(@{@"auid": @"0"});
 }
 - (void) adClosed:(AppnextAd *)ad{
@@ -45,6 +49,8 @@
     [appnext sendEvent:@"onRewardedVideoClicked" body:@{ @"auid": @"0" }];
 }
 - (void) adUserWillLeaveApplication:(AppnextAd *)ad{
+    NSLog(@"RewardedVideoDelegate => adUserWillLeaveApplication");
+
 }
 - (void) adError:(AppnextAd *)ad error:(NSString *)error{
     reject(@"RewardedVideoDelegate", error, [NSError errorWithDomain:error code:100 userInfo:nil]);
